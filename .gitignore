@@ -1,0 +1,16 @@
+# IDE state and settings storage
+.vs
+.idea
+*.DotSettings.user
+launchSettings.json
+*.user
+
+# OS garbage
+.DS_Store
+
+# Build and packaging by-products
+bin/
+obj/
+
+# Devcontainer customization scripts
+.devcontainer/scripts/*

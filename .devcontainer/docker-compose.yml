@@ -1,0 +1,12 @@
+version: '3'
+services:
+  c-sharp-test-environment:
+    build: .
+    volumes:
+      - ..:/workspace
+      - ~/.gitconfig:/root/.gitconfig
+      - ./persistence/nuget:/root/.nuget
+    command: sleep infinity
+    ports:
+      - "5000:5000"
+      - "5001:5001"

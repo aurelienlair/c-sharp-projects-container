@@ -1,0 +1,19 @@
+{
+    "name": "C-sharp test environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "c-sharp-test-environment",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "formulahendry.dotnet-test-explorer",
+        "ms-vscode.csharp",
+        "peterjausovec.vscode-docker",
+        "editorconfig.editorconfig",
+        "hbenl.vscode-test-explorer",
+        "ms-vsliveshare.vsliveshare-pack",
+        "eamodio.gitlens",
+        "tintoy.msbuild-project-tools",
+        "logerfo.sln-support"
+    ],
+    "postCreateCommand": ""
+}
