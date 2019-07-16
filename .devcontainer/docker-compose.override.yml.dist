@@ -1,0 +1,13 @@
+---
+version: '3'
+
+volumes:                                                                                                          
+  c-sharp-projects-source:
+    driver: local                                                                  
+    driver_opts:                                                                   
+      type: none                                                                   
+      o: bind                                                                      
+      ## Adjust the following path to match the folder where your source code is located
+      device: "${HOME}/c-sharp-projects"    
+
+# vim: ai ts=2 sw=2 sts=2 ft=yaml

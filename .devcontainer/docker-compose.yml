@@ -1,12 +1,20 @@
 version: '3'
+
+volumes:
+  c-sharp-projects-source:
+    external: true
+                                                            
 services:
-  c-sharp-test-environment:
+  c-sharp:
     build: .
     volumes:
-      - ..:/workspace
+      - c-sharp-projects-source:/workspace
       - ~/.gitconfig:/root/.gitconfig
-      - ./persistence/nuget:/root/.nuget
     command: sleep infinity
     ports:
       - "5000:5000"
       - "5001:5001"
+      # remap Mysql port
+      - "9306:3306"
+
+# vim: ai ts=2 sw=2 sts=2 ft=yaml

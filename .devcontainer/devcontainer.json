@@ -1,7 +1,10 @@
 {
-    "name": "C-sharp test environment",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "c-sharp-test-environment",
+    "name": "c-sharp",
+    "dockerComposeFile": [
+        "docker-compose.yml",
+        "docker-compose.override.yml"
+    ],
+    "service": "c-sharp",
     "shutdownAction": "stopCompose",
     "workspaceFolder": "/workspace",
     "extensions": [
