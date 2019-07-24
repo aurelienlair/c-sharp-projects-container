@@ -1,7 +1,7 @@
 # C# Docker projects container
 
 ## Description
-the following project allows to run C# application on a Docker container with the proper ecosystem.
+the following project allows to run C# applications on a Docker container with the proper ecosystem.
 Dotnet or whatever other dependency *will not* to be installed on your host since you're going to develop [inside](https://code.visualstudio.com/docs/remote/containers) the container.
 
 ## Installation
@@ -41,7 +41,7 @@ You can install it by running
 ```shell
 $ docker-compose exec c-sharp dotnet tool install -g dotnet-format
 ```
-from the terminal of visual studio or in a terminal where you are connected to the remote container 
+from Visual studio's terminal of  or in a classic terminal (see below) where you are connected to the remote container 
 ```shell
 $ docker-compose exec c-sharp bash
 $ dotnet tool install -g dotnet-format
@@ -58,6 +58,25 @@ To run the tests run
 ```shell
 $ cd ~/workspace
 $ dotnet test
+```
+
+## Run dotnet commands from a classic shell terminal
+
+By default this project will be installed with a container called `c-sharp-container`. If you use Visual Studio build-in terminal you shouldn't really care about it but if you prefer to use your classic terminal you can do it by running:
+```shell
+$ docker exec -it c-sharp-container dotnet build exercism/hello-world/HelloWorld.csproj
+Microsoft (R) Build Engine version 16.1.76+g14b0a930a7 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 30.02 ms for /workspace/exercism/hello-world/HelloWorld.csproj.
+  HelloWorld -> /workspace/exercism/hello-world/bin/Debug/netcoreapp2.1/HelloWorld.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.65
+
 ```
 
 Have fun!

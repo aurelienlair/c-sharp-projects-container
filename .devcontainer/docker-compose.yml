@@ -6,6 +6,7 @@ volumes:
                                                             
 services:
   c-sharp:
+    container_name: c-sharp-container
     build: .
     volumes:
       - c-sharp-projects-source:/workspace

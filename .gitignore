@@ -13,4 +13,4 @@ bin/
 obj/
 
 # Devcontainer customization scripts
-.devcontainer/scripts/*
+#.devcontainer/scripts/*
